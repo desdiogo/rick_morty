@@ -49,5 +49,5 @@ interface CharacterDetail {
 }
 
 interface CharacterResponse {
-  character: CharacterDetail
+  character: CharacterDetail | null
 }
