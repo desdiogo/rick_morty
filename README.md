@@ -17,7 +17,7 @@ O projeto utiliza a [Rick and Morty GraphQL API](https://rickandmortyapi.com/gra
 
 ## Deploy
 A aplicação está disponível em produção através do Cloudflare Pages:
-- URL: [https://seu-projeto.pages.dev](https://seu-projeto.pages.dev)
+- URL: [https://rick-morty-6cc.pages.dev](https://rick-morty-6cc.pages.dev)
 
 ## Configuração Via Docker
 
