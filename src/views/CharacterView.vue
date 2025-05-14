@@ -1,14 +1,21 @@
 <!-- pages/character/[id].vue ou similar -->
 <script setup lang="ts">
-import { useRoute, RouterLink } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
 import { useCharacter } from '@/composables/character.ts'
 import Character from '@/components/Character.vue'
 import Episode from '@/components/Episode.vue'
 import Loading from '@/components/Loading.vue'
 import { Button } from '@/components/ui/button'
 
-const route = useRoute()
-const { character, loading } = useCharacter(String(route.params.id))
+const router = useRouter()
+const { character, loading, onResult } = useCharacter()
+
+onResult(async (result) => {
+  const data = result.data
+  if(data && data.character == null) {
+    await router.push({ name: 'not-found' })
+  }
+})
 </script>
 
 <template>
