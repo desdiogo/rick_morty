@@ -20,9 +20,8 @@ const router = createRouter({
     },
     {
       path: '/:pathMatch(.*)*',
-      redirect: '/404'
-    }
-
+      redirect: '/404',
+    },
   ],
 })
 

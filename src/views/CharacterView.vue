@@ -12,7 +12,7 @@ const { character, loading, onResult } = useCharacter()
 
 onResult(async (result) => {
   const data = result.data
-  if(data && data.character == null) {
+  if (data && data.character == null) {
     await router.push({ name: 'not-found' })
   }
 })

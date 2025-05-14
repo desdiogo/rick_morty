@@ -2,7 +2,7 @@ import { useQuery } from '@vue/apollo-composable'
 import gql from 'graphql-tag'
 import { computed } from 'vue'
 import type { CharacterResponse } from '@/@types'
-import {useRoute} from "vue-router";
+import { useRoute } from 'vue-router'
 
 const GET_CHARACTER = gql`
   query GetCharacter($id: ID!) {
@@ -29,7 +29,9 @@ export function useCharacter() {
 
   const id = String(route.params.id)
 
-  const { result, loading, error,onResult } = useQuery<CharacterResponse>(GET_CHARACTER, { id: String(id) })
+  const { result, loading, error, onResult } = useQuery<CharacterResponse>(GET_CHARACTER, {
+    id: String(id),
+  })
 
   const character = computed(() => result.value?.character)
 
@@ -37,6 +39,6 @@ export function useCharacter() {
     character,
     loading,
     error,
-    onResult
+    onResult,
   }
 }

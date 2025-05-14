@@ -4,7 +4,9 @@ import { MoreHorizontal } from 'lucide-vue-next'
 import { PaginationEllipsis, type PaginationListProps } from 'reka-ui'
 import { type HTMLAttributes } from 'vue'
 
-const {class: className, ...delegated} = defineProps<PaginationListProps & { class?: HTMLAttributes['class'] }>()
+const { class: className, ...delegated } = defineProps<
+  PaginationListProps & { class?: HTMLAttributes['class'] }
+>()
 </script>
 
 <template>
