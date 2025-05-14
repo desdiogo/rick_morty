@@ -1,23 +1,17 @@
 <script setup lang="ts">
 import { cn } from '@/lib/utils'
 import { PaginationList, type PaginationListProps } from 'reka-ui'
-import { computed, type HTMLAttributes } from 'vue'
+import { type HTMLAttributes } from 'vue'
 
-const props = defineProps<PaginationListProps & { class?: HTMLAttributes['class'] }>()
-
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const {class: className, ...delegated} = defineProps<PaginationListProps & { class?: HTMLAttributes['class'] }>()
 </script>
 
 <template>
   <PaginationList
     v-slot="slotProps"
     data-slot="pagination-content"
-    v-bind="delegatedProps"
-    :class="cn('flex flex-row items-center gap-1', props.class)"
+    v-bind="delegated"
+    :class="cn('flex flex-row items-center gap-1', className)"
   >
     <slot v-bind="slotProps" />
   </PaginationList>

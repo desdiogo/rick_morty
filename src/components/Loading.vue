@@ -12,6 +12,4 @@ import { Skeleton } from '@/components/ui/skeleton'
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

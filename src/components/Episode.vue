@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import {
-  Card,
-  CardContent,
-} from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 import Text from '@/components/Text.vue'
 import type { Episode } from '@/@types'
 
@@ -18,6 +15,4 @@ defineProps<Episode>()
   </Card>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

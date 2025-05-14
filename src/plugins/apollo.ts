@@ -4,5 +4,5 @@ const cache = new InMemoryCache()
 
 export const apolloClient = new ApolloClient({
   cache,
-  uri: 'https://rickandmortyapi.com/graphql'
+  uri: 'https://rickandmortyapi.com/graphql',
 })

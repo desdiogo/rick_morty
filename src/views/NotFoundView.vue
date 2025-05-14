@@ -16,9 +16,7 @@ import { RouterLink } from 'vue-router'
 
       <CardContent class="flex justify-center">
         <Button asChild>
-          <RouterLink :to="{ name: 'home' }">
-            Back to Home
-          </RouterLink>
+          <RouterLink :to="{ name: 'home' }"> Back to Home </RouterLink>
         </Button>
       </CardContent>
     </Card>

@@ -17,13 +17,15 @@ const { character, loading } = useCharacter(String(route.params.id))
     <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row p-8 gap-8">
       <div class="md:w-1/3">
         <Button asChild class="w-fit mb-4">
-          <RouterLink :to="{name: 'home'}">Go Home</RouterLink>
+          <RouterLink :to="{ name: 'home' }">Go Home</RouterLink>
         </Button>
-        <div class="sticky top-0  flex"
-             :class="{
-          'items-center': character.episode.length >= 10,
-          'md:h-[calc(100vh-4rem)]': character.episode.length >= 10
-        }">
+        <div
+          class="sticky top-0 flex"
+          :class="{
+            'items-center': character.episode.length >= 10,
+            'md:h-[calc(100vh-4rem)]': character.episode.length >= 10,
+          }"
+        >
           <Character v-bind="character" />
         </div>
       </div>
