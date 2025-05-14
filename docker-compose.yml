@@ -1,0 +1,12 @@
+services:
+  frontend:
+    build:
+      context: .
+    ports:
+      - "5173:5173"
+    networks:
+      - rick_morty
+
+networks:
+  rick_morty:
+    driver: bridge
